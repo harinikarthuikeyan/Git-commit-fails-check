@@ -1,0 +1,13 @@
+﻿# REQUIRES-PROPERTIES-FILE - # Do not remove this comment!
+CREATE OR REPLACE DATASOURCE CUSTOM ds_mangodb
+    CLASSNAME='com.denodo.connect.mongodb.wrapper.MongoDBWrapper'
+    JARS 'denodo-mongodb-customwrapper'
+    PARAMETERS (
+      'Host' = '${databases.sample_check.datasources.custom.ds_mangodb.Host}',
+      'Port' = ${databases.sample_check.datasources.custom.ds_mangodb.Port},
+      'Pass-through session credentials' = false,
+      'Password' = '${databases.sample_check.datasources.custom.ds_mangodb.Password}' ${databases.sample_check.datasources.custom.ds_mangodb.Password.encrypted},
+      'Database' = '${databases.sample_check.datasources.custom.ds_mangodb.Database}',
+      'Use SSL/TLS' = ${databases.sample_check.datasources.custom.ds_mangodb.Use SSL/TLS}
+    );
+

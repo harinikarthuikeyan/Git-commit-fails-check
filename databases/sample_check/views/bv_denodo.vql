@@ -1,0 +1,30 @@
+﻿CREATE OR REPLACE WRAPPER CUSTOM bv_denodo
+    DATASOURCENAME=ds_mango_db2
+    PARAMETERS (
+      'Collection' = 'denodo'
+    )
+    OUTPUTSCHEMA (
+        _id = '_id' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        id = 'id' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        name_0 = ' name' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE
+    );
+
+CREATE OR REPLACE TABLE bv_denodo I18N sv (
+        _id:text (sourcetypeid = '12'),
+        id:text (sourcetypeid = '12'),
+        name_0:text (sourcetypeid = '12')
+    )
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD bv_denodo(
+        I18N sv
+        CONSTRAINTS (
+             ADD _id (any) OPT ANY
+             ADD id (any) OPT ANY
+             ADD name_0 (any) OPT ANY
+        )
+        OUTPUTLIST (_id, id, name_0
+        )
+        WRAPPER (custom bv_denodo)
+    );
+

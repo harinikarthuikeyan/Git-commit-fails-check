@@ -1,0 +1,68 @@
+﻿# REQUIRES-PROPERTIES-FILE - # Do not remove this comment!
+CREATE OR REPLACE DATASOURCE CUSTOM ds_stem
+    CLASSNAME='com.denodo.vdb.contrib.wrapper.xls.ExcelWrapper';
+
+CREATE OR REPLACE WRAPPER CUSTOM ds_stem
+    DATASOURCENAME=ds_stem
+    PARAMETERS (
+      'Type of file' = 'Excel 2007 or later (*.xlsx)',
+      'File location' = ROUTE LOCAL 'LocalConnection' '${databases.sample_check.views.custom.ds_stem.File location.ROUTE.LOCAL.PATH}',
+      'Extract data from all sheets' = false,
+      'Extract sheet name as a new column' = false,
+      'Has headers' = false,
+      'Stream tuples' = true
+    )
+    OUTPUTSCHEMA (
+        column_0 = 'Column_0' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_1 = 'Column_1' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_2 = 'Column_2' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_3 = 'Column_3' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_4 = 'Column_4' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_5 = 'Column_5' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_6 = 'Column_6' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_7 = 'Column_7' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_8 = 'Column_8' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_9 = 'Column_9' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_10 = 'Column_10' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_11 = 'Column_11' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_12 = 'Column_12' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_13 = 'Column_13' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_14 = 'Column_14' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_15 = 'Column_15' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_16 = 'Column_16' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_17 = 'Column_17' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_18 = 'Column_18' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_19 = 'Column_19' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_20 = 'Column_20' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_21 = 'Column_21' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_22 = 'Column_22' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_23 = 'Column_23' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_24 = 'Column_24' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_25 = 'Column_25' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_26 = 'Column_26' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_27 = 'Column_27' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_28 = 'Column_28' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_29 = 'Column_29' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_30 = 'Column_30' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_31 = 'Column_31' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_32 = 'Column_32' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_33 = 'Column_33' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_34 = 'Column_34' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_35 = 'Column_35' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_36 = 'Column_36' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_37 = 'Column_37' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_38 = 'Column_38' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_39 = 'Column_39' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_40 = 'Column_40' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_41 = 'Column_41' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_42 = 'Column_42' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_43 = 'Column_43' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_44 = 'Column_44' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_45 = 'Column_45' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_46 = 'Column_46' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_47 = 'Column_47' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_48 = 'Column_48' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_49 = 'Column_49' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        column_50 = 'Column_50' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE
+    );
+

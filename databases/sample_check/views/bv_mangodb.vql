@@ -1,0 +1,66 @@
+﻿CREATE OR REPLACE WRAPPER CUSTOM bv_mangodb
+    DATASOURCENAME=ds_mangodb
+    PARAMETERS (
+      'Collection' = 'demo'
+    )
+    OUTPUTSCHEMA (
+        _id = '_id' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        region = 'Region' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        country = 'Country' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        itemtype_0 = 'Item Type' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        saleschannel_0 = 'Sales Channel' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        orderpriority_0 = 'Order Priority' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        orderdate_0 = 'Order Date' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        orderid_0 = 'Order ID' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        shipdate_0 = 'Ship Date' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        unitssold_0 = 'Units Sold' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        unitprice_0 = 'Unit Price' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        unitcost_0 = 'Unit Cost' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        totalrevenue_0 = 'Total Revenue' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        totalcost_0 = 'Total Cost' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE,
+        totalprofit_0 = 'Total Profit' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE
+    );
+
+CREATE OR REPLACE TABLE bv_mangodb I18N sv (
+        _id:text (sourcetypeid = '12'),
+        region:text (sourcetypeid = '12'),
+        country:text (sourcetypeid = '12'),
+        itemtype_0:text (sourcetypeid = '12'),
+        saleschannel_0:text (sourcetypeid = '12'),
+        orderpriority_0:text (sourcetypeid = '12'),
+        orderdate_0:text (sourcetypeid = '12'),
+        orderid_0:text (sourcetypeid = '12'),
+        shipdate_0:text (sourcetypeid = '12'),
+        unitssold_0:text (sourcetypeid = '12'),
+        unitprice_0:text (sourcetypeid = '12'),
+        unitcost_0:text (sourcetypeid = '12'),
+        totalrevenue_0:text (sourcetypeid = '12'),
+        totalcost_0:text (sourcetypeid = '12'),
+        totalprofit_0:text (sourcetypeid = '12')
+    )
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD bv_mangodb(
+        I18N sv
+        CONSTRAINTS (
+             ADD _id (any) OPT ANY
+             ADD region (any) OPT ANY
+             ADD country (any) OPT ANY
+             ADD itemtype_0 (any) OPT ANY
+             ADD saleschannel_0 (any) OPT ANY
+             ADD orderpriority_0 (any) OPT ANY
+             ADD orderdate_0 (any) OPT ANY
+             ADD orderid_0 (any) OPT ANY
+             ADD shipdate_0 (any) OPT ANY
+             ADD unitssold_0 (any) OPT ANY
+             ADD unitprice_0 (any) OPT ANY
+             ADD unitcost_0 (any) OPT ANY
+             ADD totalrevenue_0 (any) OPT ANY
+             ADD totalcost_0 (any) OPT ANY
+             ADD totalprofit_0 (any) OPT ANY
+        )
+        OUTPUTLIST (_id, country, itemtype_0, orderdate_0, orderid_0, orderpriority_0, region, saleschannel_0, shipdate_0, totalcost_0, totalprofit_0, totalrevenue_0, unitcost_0, unitprice_0, unitssold_0
+        )
+        WRAPPER (custom bv_mangodb)
+    );
+

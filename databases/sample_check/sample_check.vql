@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE DATABASE sample_check '';
+
+ALTER DATABASE sample_check
+  CHARSET DEFAULT;
+

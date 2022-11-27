@@ -1,0 +1,115 @@
+﻿CREATE OR REPLACE TABLE ds_stem1_recreated I18N sv (
+        column_0:text (sourcetypeid = '12'),
+        column_1:text (sourcetypeid = '12'),
+        column_2:text (sourcetypeid = '12'),
+        column_3:text (sourcetypeid = '12'),
+        column_4:text (sourcetypeid = '12'),
+        column_5:text (sourcetypeid = '12'),
+        column_6:text (sourcetypeid = '12'),
+        column_7:text (sourcetypeid = '12'),
+        column_8:text (sourcetypeid = '12'),
+        column_9:text (sourcetypeid = '12'),
+        column_10:text (sourcetypeid = '12'),
+        column_11:text (sourcetypeid = '12'),
+        column_12:text (sourcetypeid = '12'),
+        column_13:text (sourcetypeid = '12'),
+        column_14:text (sourcetypeid = '12'),
+        column_15:text (sourcetypeid = '12'),
+        column_16:text (sourcetypeid = '12'),
+        column_17:text (sourcetypeid = '12'),
+        column_18:text (sourcetypeid = '12'),
+        column_19:text (sourcetypeid = '12'),
+        column_20:text (sourcetypeid = '12'),
+        column_21:text (sourcetypeid = '12'),
+        column_22:text (sourcetypeid = '12'),
+        column_23:text (sourcetypeid = '12'),
+        column_24:text (sourcetypeid = '12'),
+        column_25:text (sourcetypeid = '12'),
+        column_26:text (sourcetypeid = '12'),
+        column_27:text (sourcetypeid = '12'),
+        column_28:text (sourcetypeid = '12'),
+        column_29:text (sourcetypeid = '12'),
+        column_30:text (sourcetypeid = '12'),
+        column_31:text (sourcetypeid = '12'),
+        column_32:text (sourcetypeid = '12'),
+        column_33:text (sourcetypeid = '12'),
+        column_34:text (sourcetypeid = '12'),
+        column_35:text (sourcetypeid = '12'),
+        column_36:text (sourcetypeid = '12'),
+        column_37:text (sourcetypeid = '12'),
+        column_38:text (sourcetypeid = '12'),
+        column_39:text (sourcetypeid = '12'),
+        column_40:text (sourcetypeid = '12'),
+        column_41:text (sourcetypeid = '12'),
+        column_42:text (sourcetypeid = '12'),
+        column_43:text (sourcetypeid = '12'),
+        column_44:text (sourcetypeid = '12'),
+        column_45:text (sourcetypeid = '12'),
+        column_46:text (sourcetypeid = '12'),
+        column_47:text (sourcetypeid = '12'),
+        column_48:text (sourcetypeid = '12'),
+        column_49:text (sourcetypeid = '12'),
+        column_50:text (sourcetypeid = '12')
+    )
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD ds_stem1_recreated(
+        I18N sv
+        CONSTRAINTS (
+             ADD column_0 (any) OPT ANY
+             ADD column_1 (any) OPT ANY
+             ADD column_2 (any) OPT ANY
+             ADD column_3 (any) OPT ANY
+             ADD column_4 (any) OPT ANY
+             ADD column_5 (any) OPT ANY
+             ADD column_6 (any) OPT ANY
+             ADD column_7 (any) OPT ANY
+             ADD column_8 (any) OPT ANY
+             ADD column_9 (any) OPT ANY
+             ADD column_10 (any) OPT ANY
+             ADD column_11 (any) OPT ANY
+             ADD column_12 (any) OPT ANY
+             ADD column_13 (any) OPT ANY
+             ADD column_14 (any) OPT ANY
+             ADD column_15 (any) OPT ANY
+             ADD column_16 (any) OPT ANY
+             ADD column_17 (any) OPT ANY
+             ADD column_18 (any) OPT ANY
+             ADD column_19 (any) OPT ANY
+             ADD column_20 (any) OPT ANY
+             ADD column_21 (any) OPT ANY
+             ADD column_22 (any) OPT ANY
+             ADD column_23 (any) OPT ANY
+             ADD column_24 (any) OPT ANY
+             ADD column_25 (any) OPT ANY
+             ADD column_26 (any) OPT ANY
+             ADD column_27 (any) OPT ANY
+             ADD column_28 (any) OPT ANY
+             ADD column_29 (any) OPT ANY
+             ADD column_30 (any) OPT ANY
+             ADD column_31 (any) OPT ANY
+             ADD column_32 (any) OPT ANY
+             ADD column_33 (any) OPT ANY
+             ADD column_34 (any) OPT ANY
+             ADD column_35 (any) OPT ANY
+             ADD column_36 (any) OPT ANY
+             ADD column_37 (any) OPT ANY
+             ADD column_38 (any) OPT ANY
+             ADD column_39 (any) OPT ANY
+             ADD column_40 (any) OPT ANY
+             ADD column_41 (any) OPT ANY
+             ADD column_42 (any) OPT ANY
+             ADD column_43 (any) OPT ANY
+             ADD column_44 (any) OPT ANY
+             ADD column_45 (any) OPT ANY
+             ADD column_46 (any) OPT ANY
+             ADD column_47 (any) OPT ANY
+             ADD column_48 (any) OPT ANY
+             ADD column_49 (any) OPT ANY
+             ADD column_50 (any) OPT ANY
+        )
+        OUTPUTLIST (column_0, column_1, column_10, column_11, column_12, column_13, column_14, column_15, column_16, column_17, column_18, column_19, column_2, column_20, column_21, column_22, column_23, column_24, column_25, column_26, column_27, column_28, column_29, column_3, column_30, column_31, column_32, column_33, column_34, column_35, column_36, column_37, column_38, column_39, column_4, column_40, column_41, column_42, column_43, column_44, column_45, column_46, column_47, column_48, column_49, column_5, column_50, column_6, column_7, column_8, column_9
+        )
+        WRAPPER (custom ds_stem1_recreated)
+    );
+
