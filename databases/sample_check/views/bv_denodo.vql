@@ -9,7 +9,7 @@
         name_0 = ' name' : 'java.lang.String' (OPT) (sourcetypeid='12')  SORTABLE
     );
 
-CREATE OR REPLACE TABLE bv_denodo_12 I18N sv (
+CREATE OR REPLACE TABLE bv_denodo I18N sv (
         _id:text (sourcetypeid = '12'),
         id:text (sourcetypeid = '12'),
         name_0:text (sourcetypeid = '12')
